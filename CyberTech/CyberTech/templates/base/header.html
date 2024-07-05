@@ -1,0 +1,57 @@
+{% load static %}
+<header>
+    <nav class="navbar bg-body-tertiary" style="background-color: #f0f0f0;">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="{% url "principal" %}">
+                <img src="{% static 'img/CyberTech.png' %}" alt="Logo" class="d-inline-block align-text-top">
+            </a>
+            <!-- Barra de Búsqueda -->
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
+                    style="border-radius: 20px;">
+                <button class="btn btn-outline-success" type="submit"
+                    style="background-color: #2293FF; color: #fff; border-color: #2293FF;">Buscar</button>
+            </form>
+            <!-- Botones del Login -->
+            <div>
+                <button id="loginBtn" class="btn btn-outline-success me-2" type="button"
+                    style="background-color: #2293FF; color: #fff; border-color: #2293FF;">Iniciar Sesión</button>
+                <a href="{% url "registro" %}"><button class="btn btn-sm btn-outline-secondary" type="button">Registrarse</button></a>
+            </div>
+            <!-- Icono del carrito -->
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight" style="margin-right: 70px;">
+                <img src="{% static 'img/carrito-de-compras.png' %}" alt="Carrito de compras"
+                    style="width: 50px; height: 50px;">
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h2 style="color: #2293FF;">Carrito de compras</h2>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Barra para elegir categoria -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #f0f0f0;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link active" href="{% url "tecnologia" %}">Tecnología</a>
+                    <a class="nav-link active" href="{% url "hardware" %}">Hardware</a>
+                    <a class="nav-link active" href="{% url "perifericos" %}">Periféricos</a>
+                    <a class="nav-link active" href="{% url "electrodomesticos" %}">Electrodomésticos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

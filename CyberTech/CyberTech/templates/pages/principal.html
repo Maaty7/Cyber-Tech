@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberTech</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleV2.css' %}"> 
+</head>
+
+<body>
+    
+    {% include "base/header.html" %}
+    <main>
+        <!-- Carrusel de las fotos -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <h1 style="color: #0d68bf; text-align: center; margin-top: 20px;">Ofertas Imperdibles</h1>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/RTX 3090 OFRERTA.png' %}" class="d-block mx-auto my-auto" alt="Oferta 1"
+                        style="height: 500px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/Play 5 Oferta.png' %}" class="d-block mx-auto my-auto" alt="Play 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/Notebook Oferta.png' %}" class="d-block mx-auto my-auto" alt="Notebook">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <div class="container">
+            <div class="row justify-content-center mx-3">
+
+                <div class="col-4 my-3">
+                    <div class="product-card text-center">
+                        <img src="{% static 'img/Audifonos.png' %}" alt="Audifonos HyperX" class="imagen-producto img-fluid">
+                        <div class="product-details">
+                            <div class="titulo">HyperX</div>
+                            <div class="descripcion">Audífonos HyperX Cloud II Inalámbricos Color Negro/Rojo</div>
+                            <div class="precio-original">$105.700</div>
+                            <div class="descuento">Descuento: 30%</div>
+                            <div class="precio">$73.990</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 my-3">
+                    <div class="product-card text-center">
+                        <img src="{% static 'img/img_iPhone_14_Pro_Max.webp' %}" alt="Iphone 14 Pro Max"
+                            class="imagen-producto img-fluid">
+                        <div class="product-details">
+                            <div class="titulo">Apple</div>
+                            <div class="descripcion">Iphone 14 Pro Max 5G 512GB</div>
+                            <div class="precio-original">$1.699.990</div>
+                            <div class="descuento">Descuento: 24%</div>
+                            <div class="precio">$1.299.990</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 my-3">
+                    <div class="product-card text-center">
+                        <a href="{% url "vistaProducto" %}"><img src="{% static 'img/img__teclado_kumara.png' %}" alt="Teclado Red Dragon"
+                            class="imagen-producto img-fluid"></a>
+                        <div class="product-details">
+                            <div class="titulo">RedDragon</div>
+                            <div class="descripcion">TECLADO GAMER KUMARA K552</div>
+                            <div class="precio-original">$46.790</div>
+                            <div class="descuento">Descuento: 30%</div>
+                            <div class="precio">$35.990</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 my-3">
+                    <div class="product-card text-center">
+                        <img src="{% static 'img/img_alexa.png' %}" alt="Alexa" class="imagen-producto img-fluid">
+                        <div class="product-details">
+                            <div class="titulo">Amazon</div>
+                            <div class="descripcion">Alexa echo dot 5 Blanco</div>
+                            <div class="precio-original">$79.990</div>
+                            <div class="descuento">Descuento: 34%</div>
+                            <div class="precio">$52.990</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    {% include "base/footer.html" %}
+    
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>
